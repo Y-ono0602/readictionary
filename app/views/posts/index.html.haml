@@ -1,0 +1,5 @@
+= form_tag '/', id: "search", method: "get" do
+  = label_tag :keyword, "Search for:"
+  = text_field_tag :keyword
+  = submit_tag "search"
+.search-results
