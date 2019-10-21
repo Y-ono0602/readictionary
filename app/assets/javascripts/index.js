@@ -1,44 +1,31 @@
+$(document).on('turbolinks:load', function() {
 $(function() {
-  function buildBook(post){
-    var html = `<p>{{ items[0].volumeInfo.title }}</p>
+  function buildBook(item){
+    var html = `<p>${item.volumeInfo.title}</p>
+    <p>著者:${item.volumeInfo.authors}</p>
+    <img src="${item.volumeInfo.imageLinks.thumbnail}">
     `
     return html;
   }
 
   $('#search').on('submit',function(e){
     e.preventDefault();
+    $(".search-results").empty();
     var input = $('#keyword').val();
     var href = 'https://www.googleapis.com/books/v1/volumes?q='+input
-    // fetch(href)
-    // .then(function (response) {
-    //   var html = buildBook(post);
-    //   $('.search-results').append(html)
-    // }).catch(function (error) {
-    //   document.body.innerHTML = body;
-    // });
+
     fetch(href)
-    .then(response => {
-      
+    .then(function(response) {
+      return response.json();
     })
+    .then(function(books) {
+      for (var i = 0; i < books.items.length; i++) {
+           var item = books.items[i];
+           var html = buildBook(item);
+      $('.search-results').append(html)}
+      $('.submit-btn').prop('disabled', false);
+    });
   });
 
-
-
-  // $('#search').on('submit',function(e){
-  //   e.preventDefault();
-  //   var input = $('#keyword').val();
-  //   var href = 'https://www.googleapis.com/books/v1/volumes?'+'q={input}'
-  //   $.ajax({
-  //     type:'GET',
-  //     url: href,
-  //     type: 'json'
-  //   });
-  //   // .done(function(posts){
-  //   //   var html = buildBook(post);
-  //   //   $('.search-results').append(html)
-  //   // })
-  //   // .fail(function(){
-  //   //   alert('エラー');
-  //   // });
-  // });
+});
 });
