@@ -4,7 +4,7 @@
 html {
   font-size: 62.5%;
   background-color:#1f1f1f;
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   background-image: url(image-path("books-4.jpg"));
 }
 .wrapper {
@@ -40,7 +40,7 @@ html {
       height: 6px;
       width: 2px;
       background-color: #696969;
-  }
+      }
   }
 }
 .form {
@@ -61,29 +61,108 @@ input[type="text"]{
 .submit-btn {
   display:none;
 }
+
+// 以降検索結果
 .search-results {
   margin: 0 auto;
+  overflow: hidden;
 }
 .book-info {
   padding: 30px;
-  // border-radius: 5px;
-  background-color: black;
   margin: 40px auto;
-  width: 600px;
-  height: 210px;
+  width: 650px;
+  background-color: rgba(0,0,0,0.8);
+  transition: .8s;
 }
 .top-info {
   display:flex;
   &__left {
     padding-right: 30px;
+    &__book-image{
+      width: 130px;
+      border-radius: 5px;
+    }
   }
   &__right {
     color:white;
-    font-size:1.9rem;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size:1.4rem;
+    // position:relative;
+    width:100%;
+    &__title{
+      font-weight:bold;
+      font-size:1.8rem;
+      border-bottom: solid 1px white;
+      padding-bottom: 15px;
+    }
+    &__description {
+      width:100%;
+      line-height:2.5rem;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+    &__btn{
+      // position:absolute;
+      // bottom:2px;
+      // width:100%;
+      height:40px;
+      width:100%;
+      border-radius:25px;
+      color: #ffa62a;
+      font-weight:bold;
+      background:none;
+      border:solid 1px #ffa62a;
+      transition: all  0.3s ease;
+    }
+    &__btn:hover {
+      color: black;
+      border: none;
+      background:#ffa62a;
+    }
   }
 }
-.book-image {
-  height: 210px;
-  border-radius: 5px;
+
+.bottom-info {
+  color:white;
+  height:100%;
+  font-size:1.4rem;
+  padding-top: 35px;
+  // display:none;
+  &__title {
+    text-align:center;
+    font-size:1.8rem;
+    padding-bottom: 15px;
+  }
+  &__description {
+    width:100%;
+    padding-bottom: 15px;
+    line-height:2.5rem;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  &__btn {
+    width:100%;
+    height:40px;
+    font-weight:bold;
+    border-radius:25px;
+    color: black;
+    border: none;
+    background: #ffa62a;
+    transition: all  0.3s ease;
+  }
+  &__btn:hover {
+    background: #febd69;
+  }
+}
+
+// 最下部
+footer {
+  width: 100vw;
+  height: 65px;
+  background-color: #0e192d;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  line-height: 65px;
+  font-size: 1.2rem;
+  color: white;
+  letter-spacing: 1px;
 }
