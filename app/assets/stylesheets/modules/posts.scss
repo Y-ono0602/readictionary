@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background-color:#1f1f1f;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  background-image: url(image-path("books-4.jpg"));
+}
+.wrapper {
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-title {
+  color:white;
+  font-size: 8rem;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 60px;
+  text-align: center;
+  &__search-field {
+    position: relative;
+    &__search-icon {
+        position: absolute;
+        right: 110px;
+        top: 35px;
+        width: 12px;
+        height: 12px;
+        border: solid 2px #696969;
+        border-radius: 100%;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+    &__search-icon:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 3px;
+      height: 6px;
+      width: 2px;
+      background-color: #696969;
+  }
+  }
+}
+.form {
+  width: 15em;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+input {
+  border: none;
+  font-size: 1.8rem;
+  outline: none;
+}
+input[type="text"]{
+  width: 400px;
+  height: 40px;
+  border-radius: 59px;
+  padding-left:20px;
+}
+.submit-btn {
+  display:none;
+}
+.search-results {
+  margin: 0 auto;
+}
+.book-info {
+  padding: 30px;
+  // border-radius: 5px;
+  background-color: black;
+  margin: 40px auto;
+  width: 600px;
+  height: 210px;
+}
+.top-info {
+  display:flex;
+  &__left {
+    padding-right: 30px;
+  }
+  &__right {
+    color:white;
+    font-size:1.9rem;
+    font-family: 'Sawarabi Mincho', sans-serif;
+  }
+}
+.book-image {
+  height: 210px;
+  border-radius: 5px;
+}

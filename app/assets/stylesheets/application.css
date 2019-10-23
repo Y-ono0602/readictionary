@@ -1,2 +1,4 @@
 @import "./_reset.scss";
 @import "./modules/posts.scss";
+@import "font-awesome";
+@import "https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Sans+JP|Sawarabi+Mincho&display=swap";

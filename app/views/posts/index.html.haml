@@ -1,5 +1,10 @@
-= form_tag '/', id: "search", method: "get" do
-  = label_tag :keyword, "Search for:"
-  = text_field_tag :keyword
-  = submit_tag "search", class: "submit-btn"
+.wrapper
+  .top-title
+    BOOK SEARCH
+    .top-title__search-field
+      = form_tag '/', id: "search", method: "get" do
+        = label_tag :keyword, ""
+        = text_field_tag :keyword,"", class: "form"
+        = button_tag "", type: "submit", class: "submit-btn"
+        .top-title__search-field__search-icon
 .search-results
