@@ -47,7 +47,7 @@ $(function() {
 
 $(document).on('submit', function(){
   const Target = $('.search-results').offset();
-  var speed = 1350;
+  var speed = 100;
   $('body,html').animate({scrollTop:Target.top}, speed, 'swing');
   return false;
 });
