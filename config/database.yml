@@ -80,9 +80,6 @@ test:
 #
 production:
   <<: *default
-  # database: readictionary_production
-  # username: readictionary
-  # password: <%= ENV['READICTIONARY_DATABASE_PASSWORD'] %>
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: readictionary_production
+  username: readictionary
+  password: <%= ENV['READICTIONARY_DATABASE_PASSWORD'] %>
