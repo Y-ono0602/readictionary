@@ -130,29 +130,70 @@ input[type="text"]{
   &__title {
     text-align:center;
     font-size:1.8rem;
-    padding-bottom: 15px;
-  }
-  &__description {
-    width:100%;
-    padding-bottom: 15px;
-    line-height:2.5rem;
-    text-align: justify;
-    text-justify: inter-ideograph;
+    padding-bottom: 10px;
+    padding-top:30px;
+    background-size: 5px 1px;
+    background-image: linear-gradient(to right, rgb(216, 216, 216), rgb(216, 216, 216) 1px, transparent 2px, transparent 5px);
+    background-repeat: repeat-x;
+    &__link {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+    }
   }
   &__btn {
-    width:100%;
+    width:287px;
     height:40px;
-    font-weight:bold;
     border-radius:25px;
-    color: black;
-    border: none;
-    background: #ffa62a;
-    transition: all  0.3s ease;
-  }
-  &__btn:hover {
-    background: #febd69;
+    font-weight:bold;
+    background:none;
   }
 }
+// アマゾンボタン
+.amazon {
+  color: #ffa62a;
+  border:solid 1px #ffa62a;
+  transition: all  0.7s ease;
+}
+.amazon:hover {
+  color: black;
+  border: none;
+  background:#ffa62a;
+}
+// 楽天ボタン
+.rakuten {
+  color: #bf0000;
+  border:solid 1px #bf0000;
+  transition: all  0.7s ease;
+}
+.rakuten:hover {
+  color: black;
+  border: none;
+  background:#bf0000;
+}
+// hontoボタン
+.honto {
+  color: #0085cd;
+  border:solid 1px #0085cd;
+  transition: all  0.7s ease;
+}
+.honto:hover {
+  color: white;
+  border: none;
+  background:#0085cd;
+}
+// 紀伊國屋書店ボタン
+.knkny {
+  color: #00359d;
+  border:solid 1px #00359d;
+  transition: all  0.7s ease;
+}
+.knkny:hover {
+  color: #aaa164;
+  border: none;
+  background:#00359d;
+}
+
 
 // 最下部
 footer {
@@ -165,4 +206,7 @@ footer {
   font-size: 1.2rem;
   color: white;
   letter-spacing: 1px;
+}
+li {
+  padding-top:17px;
 }
